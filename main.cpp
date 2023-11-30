@@ -31,13 +31,13 @@ int main() {
   }
 
   do {
-    printf("\n======= BIBLIOTECA ======= \n");
+    printf("\n========= BIBLIOTECA =========\n");
     printf("1. Cadastrar livro\n");
     printf("2. Consultar por código\n");
     printf("3. Gerar arquivo de texto\n");
     printf("4. Excluir registro\n");
     printf("5. Sair\n");
-    printf("======Livros cadastrados: %d======\n", tamanho(arq));
+    printf("==== Livros cadastrados: %d ====\n", tamanho(arq));
     printf("Opção: ");
     if (scanf("%d", &op) != 1) {
       return 1;
@@ -84,19 +84,19 @@ void cadastrar(FILE *arq) {
   if (scanf(" %[^\n]s", livro.titulo) != 1) {
     return;
   }
-  getchar();
+  getchar(); // Limpa o buffer de entrada
 
   printf("Autor do livro...........: ");
   if (scanf(" %[^\n]s", livro.autor) != 1) {
     return;
   }
-  getchar();
+  getchar(); // Limpa o buffer de entrada
 
   printf("Nota do livro (0-10).....: ");
   if (scanf("%f", &livro.nota) != 1) {
     return;
   }
-  getchar();
+  getchar(); // Limpa o buffer de entrada
 
   printf("\nConfirmar <s/n>: ");
   if (scanf(" %c", &confirma) != 1) {
