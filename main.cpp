@@ -1,3 +1,4 @@
+#include <locale.h>
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
@@ -16,6 +17,7 @@ void geraarqtxt(FILE *);
 void excluir(FILE *);
 
 int main() {
+  setlocale(LC_ALL, "Portuguese");
   int op;
   FILE *arq;
 
