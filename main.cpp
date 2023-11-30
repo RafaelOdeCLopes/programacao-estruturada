@@ -82,19 +82,19 @@ void cadastrar(FILE *arq) {
   if (scanf(" %[^\n]s", livro.titulo) != 1) {
     return;
   }
-  getchar(); // Limpa o buffer de entrada
+  getchar();
 
   printf("Autor do livro...........: ");
   if (scanf(" %[^\n]s", livro.autor) != 1) {
     return;
   }
-  getchar(); // Limpa o buffer de entrada
+  getchar();
 
   printf("Nota do livro (0-10).....: ");
   if (scanf("%f", &livro.nota) != 1) {
     return;
   }
-  getchar(); // Limpa o buffer de entrada
+  getchar();
 
   printf("\nConfirmar <s/n>: ");
   if (scanf(" %c", &confirma) != 1) {
